@@ -1,0 +1,23 @@
+{
+  "name": "aashirwad-jp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "build:pages": "vite build && node scripts/prepare-github-pages.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "validate": "node scripts/validate-site.mjs",
+    "validate:i18n": "node scripts/validate-i18n.mjs",
+    "smoke": "node scripts/smoke-local.mjs",
+    "test:e2e": "playwright test",
+    "screenshots": "node scripts/capture-screenshots.mjs",
+    "extract:pdf": "python3 scripts/extract-pdf-text.py",
+    "check": "npm run validate && npm run validate:i18n && npm run build && npm run smoke && npm run test:e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "vite": "^6.0.0"
+  }
+}
