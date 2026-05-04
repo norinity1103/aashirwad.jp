@@ -788,6 +788,99 @@ main > section {
   line-height: 1.65;
 }
 
+.owner-story {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 20px;
+  padding-top: 28px;
+}
+
+.owner-greeting {
+  display: grid;
+  gap: 12px;
+  max-width: 760px;
+}
+
+.owner-greeting .section-kicker {
+  color: var(--saffron);
+  font-family: var(--font-serif);
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.owner-greeting h3 {
+  font-size: clamp(24px, 2.25vw, 34px);
+  line-height: 1.45;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.owner-greeting p:not(.section-kicker) {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.95;
+  margin: 0;
+}
+
+.owner-profile-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.owner-profile-card {
+  background: rgba(255, 253, 248, 0.72);
+  border: 1px solid rgba(222, 212, 197, 0.85);
+  display: grid;
+  gap: 14px;
+  grid-template-columns: auto minmax(0, 1fr);
+  padding: 18px;
+}
+
+.owner-profile-card .material-icon {
+  color: var(--saffron);
+  font-size: 26px;
+  margin-top: 3px;
+}
+
+.owner-role {
+  color: var(--saffron);
+  font-family: var(--font-serif);
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  margin: 0 0 7px;
+  text-transform: uppercase;
+}
+
+.owner-profile-card h4 {
+  font-size: 21px;
+  margin: 0 0 8px;
+}
+
+.owner-profile-card p:not(.owner-role) {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.78;
+  margin: 0;
+}
+
+.owner-profile-card small {
+  border-top: 1px solid rgba(222, 212, 197, 0.78);
+  color: var(--ink);
+  display: block;
+  font-size: 12px;
+  line-height: 1.7;
+  margin-top: 12px;
+  padding-top: 10px;
+}
+
 .story-gallery {
   display: grid;
   gap: 14px;
@@ -1272,6 +1365,14 @@ main > section {
 
   .story-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .owner-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .owner-profile-card {
+    padding: 16px;
   }
 
   .story-people {
