@@ -393,6 +393,21 @@ main > section {
   max-width: 1180px;
 }
 
+.intro {
+  align-items: start;
+  max-width: 1080px;
+}
+
+.intro-prose {
+  display: grid;
+  gap: clamp(22px, 3vw, 40px);
+  grid-template-columns: minmax(0, 1fr) minmax(112px, 150px);
+}
+
+.intro-copy {
+  max-width: 620px;
+}
+
 .prose {
   color: var(--muted);
   font-size: 17px;
@@ -407,9 +422,9 @@ main > section {
   background: #fffdf8;
   border: 1px solid var(--line);
   display: flex;
-  margin: 24px auto 0;
-  max-width: 184px;
-  padding: 16px;
+  margin: 6px 0 0;
+  max-width: 150px;
+  padding: 12px;
 }
 
 .brand-badge img {
@@ -1335,6 +1350,18 @@ main > section {
   .dinner-menu-grid,
   .faq-list {
     grid-template-columns: 1fr;
+  }
+
+  .intro-prose {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-copy {
+    max-width: none;
+  }
+
+  .brand-badge {
+    margin: 16px auto 0;
   }
 
   .dish-card.featured {
