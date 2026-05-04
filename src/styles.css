@@ -747,17 +747,24 @@ main > section {
 
 .story-section {
   background: #fffaf0;
+  display: grid;
+  gap: clamp(28px, 4vw, 44px);
+  margin-inline: auto;
 }
 
 .story-heading-col {
-  align-self: start;
+  justify-items: center;
   display: grid;
-  gap: 22px;
+  gap: 20px;
+  margin-inline: auto;
+  max-width: 860px;
+  text-align: center;
+  width: 100%;
 }
 
 .story-section h2 {
-  font-size: clamp(30px, 2.65vw, 42px);
-  line-height: 1.38;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.34;
   max-width: 100%;
 }
 
@@ -766,15 +773,40 @@ main > section {
   white-space: nowrap;
 }
 
+.story-eyecatch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.story-eyecatch-frame {
+  aspect-ratio: 1;
+  border: 1px solid rgba(222, 212, 197, 0.86);
+  border-radius: 999px;
+  box-shadow: 0 16px 38px rgba(35, 31, 26, 0.1);
+  width: clamp(112px, 13vw, 168px);
+}
+
+.story-eyecatch-frame img {
+  object-position: center;
+}
+
 .story-panel {
   display: grid;
-  gap: 28px;
+  gap: 24px;
+  margin-inline: auto;
+  max-width: 860px;
+  width: 100%;
 }
 
 .story-panel > p {
   color: var(--muted);
-  font-size: 18px;
+  font-size: 17px;
+  line-height: 1.95;
   margin: 0;
+  text-align: center;
 }
 
 .story-points {
@@ -809,17 +841,17 @@ main > section {
   border-top: 1px solid var(--line);
   display: grid;
   gap: 18px;
-  padding-top: 28px;
+  padding-top: 24px;
 }
 
 .owner-feature {
   display: grid;
   gap: 18px;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(180px, 0.42fr) minmax(0, 1fr);
 }
 
 .owner-photo-frame {
-  aspect-ratio: 15 / 4;
+  aspect-ratio: 4 / 3;
   border: 1px solid rgba(222, 212, 197, 0.85);
   box-shadow: var(--shadow);
 }
@@ -830,8 +862,8 @@ main > section {
 
 .owner-greeting {
   display: grid;
-  gap: 12px;
-  max-width: 760px;
+  gap: 10px;
+  max-width: 620px;
 }
 
 .owner-greeting .section-kicker {
@@ -846,7 +878,7 @@ main > section {
 }
 
 .owner-greeting h3 {
-  font-size: clamp(24px, 2.25vw, 34px);
+  font-size: clamp(22px, 2vw, 30px);
   line-height: 1.45;
   margin: 0;
   text-wrap: balance;
@@ -854,8 +886,8 @@ main > section {
 
 .owner-greeting p:not(.section-kicker) {
   color: var(--muted);
-  font-size: 16px;
-  line-height: 1.95;
+  font-size: 14px;
+  line-height: 1.85;
   margin: 0;
 }
 
@@ -869,14 +901,14 @@ main > section {
   background: rgba(255, 253, 248, 0.72);
   border: 1px solid rgba(222, 212, 197, 0.85);
   display: grid;
-  gap: 14px;
+  gap: 12px;
   grid-template-columns: auto minmax(0, 1fr);
-  padding: 18px;
+  padding: 16px;
 }
 
 .owner-profile-card .material-icon {
   color: var(--saffron);
-  font-size: 26px;
+  font-size: 22px;
   margin-top: 3px;
 }
 
@@ -893,13 +925,13 @@ main > section {
 }
 
 .owner-profile-card h4 {
-  font-size: 21px;
+  font-size: 18px;
   margin: 0 0 8px;
 }
 
 .owner-profile-card p:not(.owner-role) {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.78;
   margin: 0;
 }
@@ -914,12 +946,6 @@ main > section {
   padding-top: 10px;
 }
 
-.story-gallery {
-  display: grid;
-  gap: 14px;
-  grid-template-columns: 1fr;
-}
-
 .image-frame {
   margin: 0;
   overflow: hidden;
@@ -932,45 +958,23 @@ main > section {
   width: 100%;
 }
 
-.story-image-frame {
-  aspect-ratio: 16 / 9;
-  border: 1px solid var(--line);
-  box-shadow: 0 12px 34px rgba(35, 31, 26, 0.08);
-}
-
-.story-image-frame img {
-  object-position: center;
-}
-
-.story-side-image-frame {
-  aspect-ratio: 4 / 3;
-  border: 1px solid var(--line);
-  box-shadow: 0 14px 36px rgba(35, 31, 26, 0.1);
-  margin-top: clamp(8px, 2vw, 20px);
-  max-width: 100%;
-}
-
-.story-side-image-frame img {
-  object-position: center;
-}
-
 .story-people {
   align-items: start;
   border-top: 1px solid var(--line);
   display: grid;
-  gap: 22px;
-  grid-template-columns: minmax(220px, 0.95fr) minmax(0, 1.05fr);
-  padding-top: 28px;
+  gap: 18px;
+  grid-template-columns: minmax(180px, 0.42fr) minmax(0, 1fr);
+  padding-top: 24px;
 }
 
 .story-people h3 {
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.4;
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 }
 
 .people-image-frame {
-  aspect-ratio: 16 / 7;
+  aspect-ratio: 4 / 3;
   box-shadow: var(--shadow);
 }
 
@@ -1408,11 +1412,11 @@ main > section {
     grid-template-columns: 1fr;
   }
 
-  .story-gallery {
+  .owner-profile-grid {
     grid-template-columns: 1fr;
   }
 
-  .owner-profile-grid {
+  .owner-feature {
     grid-template-columns: 1fr;
   }
 
@@ -1494,16 +1498,8 @@ main > section {
     display: block;
   }
 
-  .story-section.section-grid {
-    grid-template-columns: minmax(420px, 0.72fr) minmax(0, 1fr);
-  }
-
   .section-grid > div:first-child h2 {
     max-width: 420px;
-  }
-
-  .story-section > div:first-child h2 {
-    max-width: 100%;
   }
 
   .section-heading h2 {
