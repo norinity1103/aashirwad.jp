@@ -791,8 +791,24 @@ main > section {
 .owner-story {
   border-top: 1px solid var(--line);
   display: grid;
-  gap: 20px;
+  gap: 18px;
   padding-top: 28px;
+}
+
+.owner-feature {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+}
+
+.owner-photo-frame {
+  aspect-ratio: 15 / 4;
+  border: 1px solid rgba(222, 212, 197, 0.85);
+  box-shadow: var(--shadow);
+}
+
+.owner-photo-frame img {
+  object-position: center;
 }
 
 .owner-greeting {
