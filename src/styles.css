@@ -756,9 +756,9 @@ main > section {
 }
 
 .story-section h2 {
-  font-size: clamp(34px, 3.35vw, 50px);
+  font-size: clamp(30px, 2.65vw, 42px);
   line-height: 1.38;
-  max-width: min(100%, 560px);
+  max-width: 100%;
 }
 
 .story-title-line {
@@ -947,7 +947,7 @@ main > section {
   border: 1px solid var(--line);
   box-shadow: 0 14px 36px rgba(35, 31, 26, 0.1);
   margin-top: clamp(8px, 2vw, 20px);
-  max-width: 520px;
+  max-width: 100%;
 }
 
 .story-side-image-frame img {
@@ -1495,7 +1495,7 @@ main > section {
   }
 
   .story-section.section-grid {
-    grid-template-columns: minmax(360px, 0.58fr) minmax(0, 1fr);
+    grid-template-columns: minmax(420px, 0.72fr) minmax(0, 1fr);
   }
 
   .section-grid > div:first-child h2 {
@@ -1503,7 +1503,7 @@ main > section {
   }
 
   .story-section > div:first-child h2 {
-    max-width: 560px;
+    max-width: 100%;
   }
 
   .section-heading h2 {
