@@ -91,7 +91,7 @@ const translations = {
     "digest.highlight4": "ターリー: ノンベジターリー 2,800円、ベジターリー 2,550円。",
     "digest.highlight5": "ビリヤニ: ベジタブル 1,650円、チキン 1,700円、マトン 1,850円。",
     "digest.highlight6": "自家製デザート: クルフィ、ガジャル・ハルワ、キール。",
-    "story.title": "店名に込めた<br class=\"desktop-break\" />「恵み」という想い。<br class=\"desktop-break\" />料理を支える人。",
+    "story.title": "<span class=\"story-title-line\">店名に込めた</span><br class=\"desktop-break\" /><span class=\"story-title-line\">「恵み」という想い。</span><br class=\"desktop-break\" /><span class=\"story-title-line\">料理を支える人。</span>",
     "story.copy": "「アシルワード」は、恵みを意味する言葉です。自然の恵みをしっかり味わえる料理、店内の雰囲気、そして皆様へのサービスまで、店主夫妻のこだわりが込められています。",
     "story.point1.title": "自然の恵み",
     "story.point1.copy": "スパイスや食材の風味を大切にした料理。",
