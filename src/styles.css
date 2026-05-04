@@ -825,6 +825,7 @@ main > section {
 }
 
 .owner-feature {
+  align-items: start;
   display: grid;
   gap: 18px;
   grid-template-columns: minmax(180px, 0.42fr) minmax(0, 1fr);
@@ -833,7 +834,7 @@ main > section {
 .owner-photo-frame {
   aspect-ratio: 4 / 3;
   border: 1px solid rgba(222, 212, 197, 0.85);
-  box-shadow: var(--shadow);
+  box-shadow: 0 14px 32px rgba(35, 31, 26, 0.08);
 }
 
 .owner-photo-frame img {
@@ -847,19 +848,19 @@ main > section {
 }
 
 .owner-greeting .section-kicker {
-  color: var(--saffron);
+  color: rgba(191, 100, 43, 0.82);
   font-family: var(--font-serif);
-  font-size: 12px;
+  font-size: 10px;
   font-style: italic;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   margin: 0;
   text-transform: uppercase;
 }
 
 .owner-greeting h3 {
-  font-size: clamp(22px, 2vw, 30px);
-  line-height: 1.45;
+  font-size: 22px;
+  line-height: 1.4;
   margin: 0;
   text-wrap: balance;
 }
@@ -867,7 +868,7 @@ main > section {
 .owner-greeting p:not(.section-kicker) {
   color: var(--muted);
   font-size: 14px;
-  line-height: 1.85;
+  line-height: 1.78;
   margin: 0;
 }
 
@@ -898,9 +899,16 @@ main > section {
   margin: 0 0 10px;
 }
 
+.story-people .prose p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.78;
+}
+
 .people-image-frame {
   aspect-ratio: 4 / 3;
-  box-shadow: var(--shadow);
+  border: 1px solid rgba(222, 212, 197, 0.85);
+  box-shadow: 0 14px 32px rgba(35, 31, 26, 0.08);
 }
 
 .people-image-frame img {
