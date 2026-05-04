@@ -406,8 +406,8 @@ main > section {
   align-items: center;
   background: #fffdf8;
   border: 1px solid var(--line);
-  display: inline-flex;
-  margin: 8px 0 0;
+  display: flex;
+  margin: 24px auto 0;
   max-width: 184px;
   padding: 16px;
 }
