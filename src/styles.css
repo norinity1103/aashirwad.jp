@@ -857,7 +857,7 @@ main > section {
 }
 
 .owner-photo-frame img {
-  object-position: center;
+  object-position: 73% center;
 }
 
 .owner-greeting {
