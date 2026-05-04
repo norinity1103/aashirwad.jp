@@ -340,10 +340,13 @@ const languageStorageKey = "aashirwad-language";
 const header = document.querySelector("[data-header]");
 const toggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".site-nav");
+const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
 const languageButtons = document.querySelectorAll("[data-lang-button]");
 const descriptionMeta = document.querySelector('meta[name="description"]');
 const ogTitleMeta = document.querySelector('meta[property="og:title"]');
 const ogDescriptionMeta = document.querySelector('meta[property="og:description"]');
+const sectionIds = navLinks.map((link) => link.getAttribute("href")?.slice(1)).filter(Boolean);
+const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
 
 function getStoredLanguage() {
   try {
@@ -428,5 +431,34 @@ languageButtons.forEach((button) => {
     applyLanguage(button.getAttribute("data-lang-button"));
   });
 });
+
+function setCurrentSection(id) {
+  navLinks.forEach((link) => {
+    const isCurrent = link.getAttribute("href") === `#${id}`;
+    if (isCurrent) {
+      link.setAttribute("aria-current", "true");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+}
+
+if ("IntersectionObserver" in window && sections.length) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visibleEntry = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visibleEntry?.target?.id) setCurrentSection(visibleEntry.target.id);
+    },
+    {
+      rootMargin: "-35% 0px -55% 0px",
+      threshold: [0.01, 0.2, 0.45],
+    },
+  );
+
+  sections.forEach((section) => observer.observe(section));
+  setCurrentSection(sections[0].id);
+}
 
 applyLanguage(getStoredLanguage());

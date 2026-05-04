@@ -78,3 +78,14 @@ test("desktop floating actions expose menu call and map", async ({ page, isMobil
   await expect(floatingActions.getByRole("link", { name: "Call", exact: true })).toHaveAttribute("href", "tel:0762622170");
   await expect(floatingActions.getByRole("link", { name: "Map", exact: true })).toHaveAttribute("href", /google\.com\/maps/);
 });
+
+test("desktop navigation marks the current section while scrolling", async ({ page, isMobile }) => {
+  test.skip(isMobile, "Desktop navigation is hidden inside the mobile menu.");
+
+  await page.goto("/");
+  await page.locator("#menu").scrollIntoViewIfNeeded();
+  await expect(page.locator('.site-nav a[aria-current="true"]')).toHaveAttribute("href", "#menu");
+
+  await page.locator("#story").scrollIntoViewIfNeeded();
+  await expect(page.locator('.site-nav a[aria-current="true"]')).toHaveAttribute("href", "#story");
+});

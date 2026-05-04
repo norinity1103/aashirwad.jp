@@ -183,11 +183,32 @@ img {
   gap: 3px;
   line-height: 1.1;
   min-width: 58px;
+  position: relative;
   text-decoration: none;
 }
 
 .site-nav a:hover {
   color: var(--wine);
+}
+
+.site-nav a::after {
+  background: var(--wine);
+  bottom: -8px;
+  content: "";
+  height: 2px;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-50%) scaleX(0.45);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+  width: 28px;
+}
+
+.site-nav a[aria-current="true"]::after {
+  opacity: 1;
+  transform: translateX(-50%) scaleX(1);
 }
 
 .nav-kicker {
@@ -207,6 +228,11 @@ img {
 }
 
 .site-nav a:hover .nav-label {
+  color: var(--wine);
+}
+
+.site-nav a[aria-current="true"] .nav-kicker,
+.site-nav a[aria-current="true"] .nav-label {
   color: var(--wine);
 }
 
