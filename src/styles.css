@@ -871,61 +871,6 @@ main > section {
   margin: 0;
 }
 
-.owner-profile-grid {
-  display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.owner-profile-card {
-  background: rgba(255, 253, 248, 0.72);
-  border: 1px solid rgba(222, 212, 197, 0.85);
-  display: grid;
-  gap: 12px;
-  grid-template-columns: auto minmax(0, 1fr);
-  padding: 16px;
-}
-
-.owner-profile-card .material-icon {
-  color: var(--saffron);
-  font-size: 22px;
-  margin-top: 3px;
-}
-
-.owner-role {
-  color: var(--saffron);
-  font-family: var(--font-serif);
-  font-size: 11px;
-  font-style: italic;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  line-height: 1.4;
-  margin: 0 0 7px;
-  text-transform: uppercase;
-}
-
-.owner-profile-card h4 {
-  font-size: 18px;
-  margin: 0 0 8px;
-}
-
-.owner-profile-card p:not(.owner-role) {
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.78;
-  margin: 0;
-}
-
-.owner-profile-card small {
-  border-top: 1px solid rgba(222, 212, 197, 0.78);
-  color: var(--ink);
-  display: block;
-  font-size: 12px;
-  line-height: 1.7;
-  margin-top: 12px;
-  padding-top: 10px;
-}
-
 .image-frame {
   margin: 0;
   overflow: hidden;
@@ -1388,16 +1333,8 @@ main > section {
     grid-column: span 1;
   }
 
-  .owner-profile-grid {
-    grid-template-columns: 1fr;
-  }
-
   .owner-feature {
     grid-template-columns: 1fr;
-  }
-
-  .owner-profile-card {
-    padding: 16px;
   }
 
   .story-people {
