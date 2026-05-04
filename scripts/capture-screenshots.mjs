@@ -9,11 +9,24 @@ const outputDir = ".artifacts/screenshots";
 const server = spawn(
   "npx",
   ["vite", "--host", "127.0.0.1", "--port", String(port), "--strictPort"],
-  { stdio: ["ignore", "pipe", "pipe"] },
+  { detached: process.platform !== "win32", stdio: "ignore" },
 );
+server.unref();
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function stopServer() {
+  try {
+    if (process.platform === "win32") {
+      server.kill("SIGTERM");
+      return;
+    }
+    process.kill(-server.pid, "SIGTERM");
+  } catch (error) {
+    if (error.code !== "ESRCH") throw error;
+  }
 }
 
 async function waitForServer() {
@@ -81,5 +94,5 @@ try {
   await browser.close();
   console.log(`Captured screenshots in ${outputDir}.`);
 } finally {
-  server.kill("SIGTERM");
+  stopServer();
 }
