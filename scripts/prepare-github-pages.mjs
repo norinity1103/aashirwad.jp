@@ -11,6 +11,7 @@ function rewriteHtml(content) {
     .replaceAll('src="/assets/', 'src="./assets/')
     .replaceAll('href="/lunch-', 'href="./lunch-')
     .replaceAll('href="/dinner-', 'href="./dinner-')
+    .replaceAll('src="/about/', 'src="./about/')
     .replaceAll('src="/menu/', 'src="./menu/')
     .replaceAll('src="/seasonal/', 'src="./seasonal/')
     .replaceAll('src="/cooks/', 'src="./cooks/');
