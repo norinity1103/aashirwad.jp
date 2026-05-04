@@ -773,26 +773,6 @@ main > section {
   white-space: nowrap;
 }
 
-.story-eyecatch {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  justify-content: center;
-  margin-top: 4px;
-}
-
-.story-eyecatch-frame {
-  aspect-ratio: 1;
-  border: 1px solid rgba(222, 212, 197, 0.86);
-  border-radius: 999px;
-  box-shadow: 0 16px 38px rgba(35, 31, 26, 0.1);
-  width: clamp(112px, 13vw, 168px);
-}
-
-.story-eyecatch-frame img {
-  object-position: center;
-}
-
 .story-panel {
   display: grid;
   gap: 24px;
