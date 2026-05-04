@@ -1388,10 +1388,6 @@ main > section {
     grid-column: span 1;
   }
 
-  .story-points {
-    grid-template-columns: 1fr;
-  }
-
   .owner-profile-grid {
     grid-template-columns: 1fr;
   }
@@ -1510,6 +1506,10 @@ main > section {
 
   .english-actions .button {
     width: 100%;
+  }
+
+  .story-points {
+    grid-template-columns: 1fr;
   }
 
   .footer-inner {
