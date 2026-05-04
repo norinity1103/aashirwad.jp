@@ -1,6 +1,6 @@
 # AASHIRWAD website replacement
 
-Lightweight Vite-based replacement site for AASHIRWAD, the Indian restaurant in Nagamachi, Kanazawa.
+Lightweight Vite-based replacement site for AASHIRWAD, the Indian restaurant on Seseragi Street in Nagamachi, Kanazawa.
 
 ## Commands
 

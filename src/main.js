@@ -1,7 +1,7 @@
 const translations = {
   ja: {
-    "meta.title": "AASHIRWAD | 金沢・長町のインド料理レストラン",
-    "meta.description": "石川県金沢市長町、せせらぎ通りのインド料理レストラン AASHIRWAD 公式サイト。ランチ・ディナーのPDFメニュー、営業時間、アクセスをご案内します。",
+    "meta.title": "AASHIRWAD | 金沢・せせらぎ通りのインド料理レストラン",
+    "meta.description": "金沢・長町のせせらぎ通りにあるインド料理レストラン AASHIRWAD。ランチ・ディナーのメニュー、営業時間、アクセスをご案内します。",
     "skip.main": "本文へ移動",
     "header.brandLabel": "AASHIRWAD トップへ",
     "header.toggleLabel": "メニューを開閉",
@@ -13,7 +13,7 @@ const translations = {
     "nav.faq": "<span class=\"nav-kicker\">FAQ</span><span class=\"nav-label\">よくある質問</span>",
     "nav.visit": "<span class=\"nav-kicker\">Visit</span><span class=\"nav-label\">店舗情報</span>",
     "nav.access": "<span class=\"nav-kicker\">Access</span><span class=\"nav-label\">アクセス</span>",
-    "hero.eyebrow": "金沢・長町のインド料理レストラン",
+    "hero.eyebrow": "金沢・長町 せせらぎ通りのインド料理レストラン",
     "hero.title": "<span class=\"no-break\">せせらぎ通りで</span><br /><span class=\"no-break\">味わう、</span><br />本格インド料理。",
     "hero.copy": "AASHIRWAD は、石川県金沢市長町にあるインド料理レストランです。ランチもディナーも、街歩きの途中に立ち寄りやすい一皿を用意しています。",
     "hero.actionsLabel": "主要リンク",
@@ -165,8 +165,8 @@ const translations = {
     "quick.label": "モバイル固定導線",
   },
   en: {
-    "meta.title": "AASHIRWAD | Indian Restaurant in Nagamachi, Kanazawa",
-    "meta.description": "Official website for AASHIRWAD, an Indian restaurant on Seseragi Street in Nagamachi, Kanazawa. View lunch and dinner menus, hours, and access.",
+    "meta.title": "AASHIRWAD | Indian Restaurant on Seseragi Street, Kanazawa",
+    "meta.description": "AASHIRWAD is an Indian restaurant on Seseragi Street in Nagamachi, Kanazawa. View lunch and dinner menus, hours, and access.",
     "skip.main": "Skip to main content",
     "header.brandLabel": "Back to AASHIRWAD top",
     "header.toggleLabel": "Open or close menu",
@@ -178,7 +178,7 @@ const translations = {
     "nav.faq": "FAQ",
     "nav.visit": "Visit",
     "nav.access": "Access",
-    "hero.eyebrow": "Indian Restaurant in Nagamachi, Kanazawa",
+    "hero.eyebrow": "Indian Restaurant on Seseragi Street, Nagamachi, Kanazawa",
     "hero.title": "Authentic Indian cuisine<br />on Seseragi Street.",
     "hero.copy": "AASHIRWAD is an Indian restaurant in Nagamachi, Kanazawa. Stop by for lunch or dinner while exploring the city.",
     "hero.actionsLabel": "Primary links",
