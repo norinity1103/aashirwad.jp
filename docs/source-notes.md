@@ -9,6 +9,10 @@
 - Instagram account: https://www.instagram.com/aashirwad.kanazawa/
 - Tabelog listing: https://tabelog.com/ishikawa/A1701/A170101/17007601/
 
+## Preview and deployment references
+
+- GitHub Pages preview: https://norinity1103.github.io/aashirwad.jp/
+
 ## Current implementation policy
 
 - Use official site facts first for address, phone, email, seats, opening hours, closed days, menu PDFs, restaurant story, and staff background.
