@@ -10,9 +10,20 @@ test("renders the main restaurant page and sections", async ({ page }) => {
   await expect(page.getByRole("heading", { name: /店名に込めた\s*「恵み」という想い。\s*料理を支える人。/ })).toBeVisible();
   await expect(page.getByRole("heading", { name: /料理を支える\s*人たち。/ })).toBeVisible();
   await expect(page.getByRole("heading", { name: /よくある\s*質問/ })).toBeVisible();
-  await expect(page.getByText("オーナー確認").first()).toBeVisible();
+  await expect(page.getByText("ハラールに配慮したメニューについては")).toBeVisible();
   await expect(page.getByRole("heading", { name: "店舗情報" })).toBeVisible();
   await expect(page.getByRole("link", { name: "Google Maps で開く 石川県金沢市長町1-4-59" })).toBeVisible();
+});
+
+test("serves the owner confirmation sheet as a noindex page", async ({ page }) => {
+  await page.goto("/owner-confirmation.html");
+
+  await expect(page).toHaveTitle(/店舗情報確認シート/);
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", "noindex, nofollow");
+  await expect(page.getByRole("heading", { name: /店舗情報\s*確認シート/ })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "FAQ 公開文と確認ポイント" })).toBeVisible();
+  await expect(page.getByText("ハラール対応")).toBeVisible();
+  await expect(page.getByText("確認中").first()).toBeVisible();
 });
 
 test("serves linked PDF menus", async ({ request }) => {

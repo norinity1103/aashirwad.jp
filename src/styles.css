@@ -1062,21 +1062,6 @@ main > section {
   margin: 0;
 }
 
-.confirm-label {
-  align-self: end;
-  background: #fff1ed;
-  border: 1px solid rgba(180, 49, 37, 0.45);
-  color: #b43125;
-  display: inline-flex;
-  font-size: 12px;
-  font-weight: 900;
-  justify-self: start;
-  letter-spacing: 0.08em;
-  line-height: 1;
-  margin-top: 2px;
-  padding: 7px 9px;
-}
-
 .shop-data {
   border-top: 1px solid var(--line);
   margin: 0;

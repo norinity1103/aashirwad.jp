@@ -19,6 +19,7 @@ const paths = [
   { path: "/cooks/sub_img01.jpg", types: ["image/jpeg"] },
   { path: "/lunch-japanese.pdf", types: ["application/pdf"] },
   { path: "/dinner-english.pdf", types: ["application/pdf"] },
+  { path: "/owner-confirmation.html", types: ["text/html"] },
   { path: "/robots.txt", types: ["text/plain"] },
   { path: "/sitemap.xml", types: ["application/xml", "text/xml"] },
 ];
