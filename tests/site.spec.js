@@ -75,9 +75,9 @@ test("mobile quick actions expose menu call and map", async ({ page, isMobile })
   const quickActions = page.getByRole("navigation", { name: "モバイル固定導線" });
   await expect(quickActions).toBeVisible();
   await expect(quickActions.getByRole("link", { name: "Menu", exact: true })).toBeVisible();
-  await expect(quickActions.getByRole("link", { name: "Instagram", exact: true })).toHaveAttribute("href", "https://www.instagram.com/aashirwad.kanazawa/");
   await expect(quickActions.getByRole("link", { name: "Call", exact: true })).toHaveAttribute("href", "tel:0762622170");
   await expect(quickActions.getByRole("link", { name: "Map", exact: true })).toHaveAttribute("href", /google\.com\/maps/);
+  await expect(page.getByRole("link", { name: "Instagramでお店の近況を見る" })).toHaveAttribute("href", "https://www.instagram.com/aashirwad.kanazawa/");
 });
 
 test("desktop floating actions expose menu call and map", async ({ page, isMobile }) => {
@@ -87,9 +87,9 @@ test("desktop floating actions expose menu call and map", async ({ page, isMobil
   const floatingActions = page.getByRole("navigation", { name: "固定CTA" });
   await expect(floatingActions).toBeVisible();
   await expect(floatingActions.getByRole("link", { name: "Menu", exact: true })).toHaveAttribute("href", "#menu");
-  await expect(floatingActions.getByRole("link", { name: "Instagram", exact: true })).toHaveAttribute("href", "https://www.instagram.com/aashirwad.kanazawa/");
   await expect(floatingActions.getByRole("link", { name: "Call", exact: true })).toHaveAttribute("href", "tel:0762622170");
   await expect(floatingActions.getByRole("link", { name: "Map", exact: true })).toHaveAttribute("href", /google\.com\/maps/);
+  await expect(page.getByRole("link", { name: "Instagramでお店の近況を見る" })).toHaveAttribute("href", "https://www.instagram.com/aashirwad.kanazawa/");
 });
 
 test("desktop navigation marks the current section while scrolling", async ({ page, isMobile }) => {

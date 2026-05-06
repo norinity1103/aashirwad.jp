@@ -1303,6 +1303,40 @@ main > section {
   font-size: 22px;
 }
 
+.instagram-follow-banner {
+  align-items: center;
+  background: rgba(255, 253, 248, 0.96);
+  border: 1px solid rgba(222, 212, 197, 0.92);
+  bottom: 24px;
+  box-shadow: 0 16px 40px rgba(35, 31, 26, 0.14);
+  color: var(--ink);
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 900;
+  gap: 8px;
+  max-width: min(320px, calc(100vw - 40px));
+  padding: 12px 14px;
+  position: fixed;
+  right: 18px;
+  text-decoration: none;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+  z-index: 24;
+}
+
+.instagram-follow-banner:hover {
+  border-color: rgba(194, 109, 46, 0.48);
+  box-shadow: 0 18px 46px rgba(35, 31, 26, 0.18);
+  transform: translateY(-2px);
+}
+
+.instagram-follow-banner .material-icon {
+  color: var(--saffron);
+  font-size: 20px;
+}
+
 @media (max-width: 900px) {
   body {
     padding-bottom: 72px;
@@ -1360,7 +1394,7 @@ main > section {
     bottom: 0;
     box-shadow: 0 -12px 32px rgba(35, 31, 26, 0.22);
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     left: 0;
     position: fixed;
     right: 0;
@@ -1376,7 +1410,7 @@ main > section {
     color: #fffdf8;
     display: inline-flex;
     flex-direction: column;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 900;
     gap: 3px;
     justify-content: center;
@@ -1395,6 +1429,15 @@ main > section {
   .mobile-quick-actions .material-icon {
     color: #f0ba73;
     font-size: 22px;
+  }
+
+  .instagram-follow-banner {
+    bottom: 82px;
+    font-size: 12px;
+    left: auto;
+    max-width: min(280px, calc(100vw - 32px));
+    padding: 10px 12px;
+    right: 12px;
   }
 
   .hero {
