@@ -389,6 +389,11 @@ h2 {
   transform: translateY(-1px);
 }
 
+.button.social {
+  border-color: rgba(240, 186, 115, 0.82);
+  color: #fff7e8;
+}
+
 .button.primary {
   background: #fffdf8;
   border-color: #fffdf8;
@@ -1308,7 +1313,7 @@ main > section {
     bottom: 0;
     box-shadow: 0 -12px 32px rgba(35, 31, 26, 0.22);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     left: 0;
     position: fixed;
     right: 0;
@@ -1324,7 +1329,7 @@ main > section {
     color: #fffdf8;
     display: inline-flex;
     flex-direction: column;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 900;
     gap: 3px;
     justify-content: center;

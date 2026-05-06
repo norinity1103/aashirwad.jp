@@ -14,9 +14,11 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://aashirwad.jp/" />
-    <meta property="og:image" content="/assets/main_img.jpg" />
+    <meta property="og:image" content="https://aashirwad.jp/assets/main_img.jpg" />
     <meta property="og:locale" content="ja_JP" />
+    <meta property="og:site_name" content="AASHIRWAD" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://aashirwad.jp/assets/main_img.jpg" />
     <meta name="theme-color" content="#263324" />
     <link rel="canonical" href="https://aashirwad.jp/" />
     <title>AASHIRWAD | 金沢・せせらぎ通りのインド料理レストラン</title>
@@ -26,12 +28,22 @@
       {
         "@context": "https://schema.org",
         "@type": "Restaurant",
+        "@id": "https://aashirwad.jp/#restaurant",
         "name": "AASHIRWAD",
         "alternateName": "インド料理レストラン アシルワード",
         "url": "https://aashirwad.jp/",
+        "logo": "https://aashirwad.jp/assets/logo.svg",
         "image": "https://aashirwad.jp/assets/main_img.jpg",
         "telephone": "076-262-2170",
         "email": "aashirwad.kanazawa@gmail.com",
+        "priceRange": "¥¥",
+        "menu": [
+          "https://aashirwad.jp/lunch-japanese.pdf",
+          "https://aashirwad.jp/dinner-japanese.pdf",
+          "https://aashirwad.jp/lunch-english.pdf",
+          "https://aashirwad.jp/dinner-english.pdf"
+        ],
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%82%B7%E3%83%AB%E3%83%AF%E3%83%BC%E3%83%89%20%E9%87%91%E6%B2%A2%20%E9%95%B7%E7%94%BA",
         "servesCuisine": ["Indian", "Nepalese", "Asian"],
         "address": {
           "@type": "PostalAddress",
@@ -109,6 +121,7 @@
           <div class="hero-actions" aria-label="主要リンク" data-i18n-attr="aria-label:hero.actionsLabel">
             <a class="button primary" href="#menu"><span class="material-icon" aria-hidden="true">restaurant</span><span data-i18n="cta.menu">メニューを見る</span></a>
             <a class="button secondary" href="tel:0762622170"><span class="material-icon" aria-hidden="true">phone</span><span data-i18n="cta.call">電話する</span></a>
+            <a class="button secondary social" href="https://www.instagram.com/aashirwad.kanazawa/" target="_blank" rel="noopener"><span class="material-icon" aria-hidden="true">photo_camera</span><span data-i18n="cta.instagram">Instagram</span></a>
           </div>
           <ul class="hero-facts" aria-label="店舗概要" data-i18n-attr="aria-label:hero.factsLabel">
             <li><span class="material-icon" aria-hidden="true">schedule</span><span data-i18n="hero.fact.hours">ランチ 11:30-14:30（LO 14:00）/ ディナー 18:00-22:00（LO 21:00）</span></li>
@@ -536,6 +549,7 @@
 
     <nav class="desktop-floating-actions" aria-label="固定CTA" data-i18n-attr="aria-label:float.label">
       <a href="#menu"><span class="material-icon" aria-hidden="true">restaurant</span><span data-i18n="float.menu">Menu</span></a>
+      <a href="https://www.instagram.com/aashirwad.kanazawa/" target="_blank" rel="noopener"><span class="material-icon" aria-hidden="true">photo_camera</span><span data-i18n="float.instagram">Instagram</span></a>
       <a href="tel:0762622170"><span class="material-icon" aria-hidden="true">phone</span><span data-i18n="float.call">Call</span></a>
       <a
         href="https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%82%B7%E3%83%AB%E3%83%AF%E3%83%BC%E3%83%89%20%E9%87%91%E6%B2%A2%20%E9%95%B7%E7%94%BA"
@@ -548,6 +562,7 @@
 
     <nav class="mobile-quick-actions" aria-label="モバイル固定導線" data-i18n-attr="aria-label:quick.label">
       <a href="#menu"><span class="material-icon" aria-hidden="true">restaurant</span><span data-i18n="quick.menu">Menu</span></a>
+      <a href="https://www.instagram.com/aashirwad.kanazawa/" target="_blank" rel="noopener"><span class="material-icon" aria-hidden="true">photo_camera</span><span data-i18n="quick.instagram">Instagram</span></a>
       <a href="tel:0762622170"><span class="material-icon" aria-hidden="true">phone</span><span data-i18n="quick.call">Call</span></a>
       <a
         href="https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%82%B7%E3%83%AB%E3%83%AF%E3%83%BC%E3%83%89%20%E9%87%91%E6%B2%A2%20%E9%95%B7%E7%94%BA"
