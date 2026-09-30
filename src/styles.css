@@ -1399,7 +1399,8 @@ main > section {
     bottom: 0;
     box-shadow: 0 -12px 32px rgba(35, 31, 26, 0.22);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
     left: 0;
     position: fixed;
     right: 0;
