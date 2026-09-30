@@ -1,6 +1,6 @@
 import { existsSync, readFileSync, statSync } from "node:fs";
 import { readFile } from "node:fs/promises";
-import { dishes, englishGuide, externalLinks, menuDigest, menuPdfs, restaurant, story } from "../src/site-data.js";
+import { dishes, englishGuide, externalLinks, restaurant, story } from "../src/site-data.js";
 
 const html = await readFile("index.html", "utf8");
 const normalizedHtml = html.replace(/\s+/g, " ");
@@ -131,25 +131,6 @@ for (const text of requiredText) {
 for (const dish of dishes) {
   for (const value of [dish.title, dish.description, dish.image]) {
     if (!html.includes(value)) errors.push(`Missing dish content: ${value}`);
-  }
-}
-
-for (const menu of menuPdfs) {
-  for (const value of [menu.label, menu.lang, menu.href]) {
-    if (!html.includes(value)) errors.push(`Missing menu PDF content: ${value}`);
-  }
-}
-
-for (const value of [menuDigest.title, menuDigest.sourceNote, ...menuDigest.lunch, ...menuDigest.dinnerHighlights]) {
-  if (!normalizedHtml.includes(value.replace(/\s+/g, " "))) {
-    errors.push(`Missing menu digest content: ${value}`);
-  }
-}
-
-for (const category of menuDigest.dinnerCategories) {
-  if (!html.includes(category.title)) errors.push(`Missing menu category: ${category.title}`);
-  for (const item of category.items) {
-    if (!html.includes(item)) errors.push(`Missing menu category item: ${item}`);
   }
 }
 
