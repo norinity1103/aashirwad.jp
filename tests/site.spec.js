@@ -70,25 +70,25 @@ test("switches visible copy between Japanese and English", async ({ page, isMobi
   await expect(page.getByRole("heading", { name: "店舗情報" })).toBeVisible();
 });
 
-test("mobile quick actions expose menu call and map", async ({ page, isMobile }) => {
+test("mobile quick actions expose call and map", async ({ page, isMobile }) => {
   test.skip(!isMobile, "Mobile quick actions only appear on mobile.");
 
   await page.goto("/");
   const quickActions = page.getByRole("navigation", { name: "モバイル固定導線" });
   await expect(quickActions).toBeVisible();
-  await expect(quickActions.getByRole("link", { name: "Menu", exact: true })).toBeVisible();
+  await expect(quickActions.locator('a[href="#menu"]')).toHaveCount(0);
   await expect(quickActions.getByRole("link", { name: "Call", exact: true })).toHaveAttribute("href", "tel:0762622170");
   await expect(quickActions.getByRole("link", { name: "Map", exact: true })).toHaveAttribute("href", /google\.com\/maps/);
   await expect(page.getByRole("link", { name: "Instagramでお店の近況を見る" })).toHaveAttribute("href", "https://www.instagram.com/aashirwad.kanazawa/");
 });
 
-test("desktop floating actions expose menu call and map", async ({ page, isMobile }) => {
+test("desktop floating actions expose call and map", async ({ page, isMobile }) => {
   test.skip(isMobile, "Desktop floating actions are hidden on mobile.");
 
   await page.goto("/");
   const floatingActions = page.getByRole("navigation", { name: "固定CTA" });
   await expect(floatingActions).toBeVisible();
-  await expect(floatingActions.getByRole("link", { name: "Menu", exact: true })).toHaveAttribute("href", "#menu");
+  await expect(floatingActions.locator('a[href="#menu"]')).toHaveCount(0);
   await expect(floatingActions.getByRole("link", { name: "Call", exact: true })).toHaveAttribute("href", "tel:0762622170");
   await expect(floatingActions.getByRole("link", { name: "Map", exact: true })).toHaveAttribute("href", /google\.com\/maps/);
   await expect(page.getByRole("link", { name: "Instagramでお店の近況を見る" })).toHaveAttribute("href", "https://www.instagram.com/aashirwad.kanazawa/");
