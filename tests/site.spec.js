@@ -7,6 +7,9 @@ test("renders the main restaurant page and sections", async ({ page }) => {
   await expect(page.getByRole("heading", { name: /本格インド料理/ })).toBeVisible();
   await expect(page.getByRole("heading", { name: /ランチ・ディナーの\s*メニュー/ })).toBeVisible();
   await expect(page.getByText("ランチ・ディナーのメニューは、ただいま内容を更新しています。")).toBeVisible();
+  await expect(page.getByText("掲載している料理は、メニューの一例です。")).toBeVisible();
+  await expect(page.locator('.site-nav a[href="#menu"]')).toHaveCount(0);
+  await expect(page.locator('.hero-actions a[href="#menu"]')).toHaveCount(0);
   await expect(page.getByRole("heading", { name: /店名に込めた\s*「恵み」という想い。\s*料理を支える人。/ })).toBeVisible();
   await expect(page.getByRole("heading", { name: /料理を支える\s*人たち。/ })).toBeVisible();
   await expect(page.getByRole("heading", { name: /よくある\s*質問/ })).toBeVisible();
@@ -95,8 +98,8 @@ test("desktop navigation marks the current section while scrolling", async ({ pa
   test.skip(isMobile, "Desktop navigation is hidden inside the mobile menu.");
 
   await page.goto("/");
-  await page.locator("#menu").scrollIntoViewIfNeeded();
-  await expect(page.locator('.site-nav a[aria-current="true"]')).toHaveAttribute("href", "#menu");
+  await page.locator("#food").scrollIntoViewIfNeeded();
+  await expect(page.locator('.site-nav a[aria-current="true"]')).toHaveAttribute("href", "#food");
 
   await page.locator("#story").scrollIntoViewIfNeeded();
   await expect(page.locator('.site-nav a[aria-current="true"]')).toHaveAttribute("href", "#story");
