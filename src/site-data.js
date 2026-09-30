@@ -48,56 +48,6 @@ export const dishes = [
   },
 ];
 
-export const menuPdfs = [
-  { label: "ランチメニュー", lang: "日本語", href: "/lunch-japanese.pdf" },
-  { label: "ディナーメニュー", lang: "日本語", href: "/dinner-japanese.pdf" },
-  { label: "Lunch Menu", lang: "English", href: "/lunch-english.pdf" },
-  { label: "Dinner Menu", lang: "English", href: "/dinner-english.pdf" },
-];
-
-export const menuDigest = {
-  title: "代表的なメニュー例",
-  sourceNote: "一例として掲載しています。価格や内容の最新情報はPDFメニューをご確認ください。",
-  lunch: [
-    "カレー&ナン / ライスセット",
-    "日替わりカレーを1-3種類選択",
-    "1種 1,350円 / 2種 1,450円 / 3種 1,550円",
-    "チキンビリヤニセット",
-    "チキンビリヤニと小さなカレー",
-    "1,450円 / 大盛り 1,600円",
-    "主食の選択",
-    "ターメリックライス、ナン、ナン&少量ライスなど",
-    "サイド追加",
-    "Tandoori Chicken、Chicken Tikka、Samosa、Papad、Raita など",
-  ],
-  dinnerCategories: [
-    {
-      title: "サラダ・軽食",
-      items: ["パパド", "マサラパパド", "チャナサラダ", "グリーンサラダ", "チキンティッカサラダ", "サモサ", "バジ", "アルサデコ"],
-    },
-    {
-      title: "タンドール・一品料理",
-      items: ["チキンティッカ", "チキンマライティッカ", "タンドーリチキン", "シークカバブ", "フィッシュティッカ", "パニール&ベジタブルティッカ"],
-    },
-    {
-      title: "ネパール料理・炒め物",
-      items: ["モモ", "スープモモ", "ココナッツ・ベイガンフライ", "じゃが芋とほうれん草のサブジ", "チェッティナード・チキンフライ", "マトンペッパーフライ"],
-    },
-    {
-      title: "カレー",
-      items: ["野菜&豆", "パニール", "鶏肉&玉子", "マトン", "キーマ", "魚&海老"],
-    },
-  ],
-  dinnerHighlights: [
-    "カレー単品はライスやナン別。辛さは 0=甘口 から 5=激辛 まで調整可能。",
-    "代表的なカレー: ダールフライ、ダールマカニ、サーグパニール、バターチキン、マトンカレー、フィッシュマサラ、ココナッツプラウンなど。",
-    "主食: バスマティライス、ターメリックライス、ナン、ガーリックナン、チーズナン、バトゥーラ、チャパティ、タンドールロティ、プーリー。",
-    "ターリー: ノンベジターリー 2,800円、ベジターリー 2,550円。",
-    "ビリヤニ: ベジタブル 1,650円、チキン 1,700円、マトン 1,850円。",
-    "自家製デザート: クルフィ、ガジャル・ハルワ、キール。",
-  ],
-};
-
 export const externalLinks = [
   { label: "Current Site", href: "http://aashirwad.jp/" },
   { label: "Facebook", href: "https://www.facebook.com/aashirwad.kanazawa/" },
@@ -107,7 +57,7 @@ export const externalLinks = [
 
 export const englishGuide = {
   title: "English guide for visitors",
-  lead: "AASHIRWAD is an Indian restaurant on Seseragi Street in Nagamachi, Kanazawa. English lunch and dinner menus are available as PDFs.",
+  lead: "AASHIRWAD is an Indian restaurant on Seseragi Street in Nagamachi, Kanazawa. English lunch and dinner menus are available.",
   lunch: "Lunch 11:30-14:30 (last order 14:00)",
   dinner: "Dinner 18:00-22:00 (last order 21:00)",
   closed: "Closed on Mondays. If Monday is a public holiday, closed on the following Tuesday.",

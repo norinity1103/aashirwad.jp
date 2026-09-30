@@ -555,6 +555,11 @@ main > section {
   text-wrap: balance;
 }
 
+.menu-notice-actions {
+  display: flex;
+  justify-content: center;
+}
+
 .menu-links {
   display: grid;
   gap: 18px;

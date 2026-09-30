@@ -6,7 +6,7 @@ test("renders the main restaurant page and sections", async ({ page }) => {
   await expect(page).toHaveTitle(/AASHIRWAD/);
   await expect(page.getByRole("heading", { name: /本格インド料理/ })).toBeVisible();
   await expect(page.getByRole("heading", { name: /ランチ・ディナーの\s*メニュー/ })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "代表的なメニュー例" })).toBeVisible();
+  await expect(page.getByText("ランチ・ディナーのメニューは、ただいま内容を更新しています。")).toBeVisible();
   await expect(page.getByRole("heading", { name: /店名に込めた\s*「恵み」という想い。\s*料理を支える人。/ })).toBeVisible();
   await expect(page.getByRole("heading", { name: /料理を支える\s*人たち。/ })).toBeVisible();
   await expect(page.getByRole("heading", { name: /よくある\s*質問/ })).toBeVisible();
@@ -26,12 +26,11 @@ test("serves the owner confirmation sheet as a noindex page", async ({ page }) =
   await expect(page.getByText("確認中").first()).toBeVisible();
 });
 
-test("serves linked PDF menus", async ({ request }) => {
-  for (const path of ["/lunch-japanese.pdf", "/dinner-japanese.pdf", "/lunch-english.pdf", "/dinner-english.pdf"]) {
-    const response = await request.get(path);
-    expect(response.ok(), path).toBeTruthy();
-    expect(response.headers()["content-type"]).toContain("application/pdf");
-  }
+test("does not link to menu PDFs or list prices while menus are being updated", async ({ page }) => {
+  await page.goto("/");
+
+  await expect(page.locator('a[href$=".pdf"]')).toHaveCount(0);
+  await expect(page.locator("#menu")).not.toContainText("円");
 });
 
 test("mobile navigation opens and links to food section", async ({ page, isMobile }) => {
